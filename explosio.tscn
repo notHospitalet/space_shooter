@@ -1,0 +1,75 @@
+[gd_scene load_steps=12 format=3 uid="uid://c74unbcs1jbc3"]
+
+[ext_resource type="Texture2D" uid="uid://bo58wysd3bqtr" path="res://Sprites-2/Sprites.png" id="1_ek4lc"]
+[ext_resource type="Script" path="res://explosio.gd" id="2_6hjjn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3m6d5"]
+atlas = ExtResource("1_ek4lc")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0autu"]
+atlas = ExtResource("1_ek4lc")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mrf5a"]
+atlas = ExtResource("1_ek4lc")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v4gl3"]
+atlas = ExtResource("1_ek4lc")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8yacs"]
+atlas = ExtResource("1_ek4lc")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yeaex"]
+atlas = ExtResource("1_ek4lc")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a3ujb"]
+atlas = ExtResource("1_ek4lc")
+region = Rect2(288, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4obml"]
+atlas = ExtResource("1_ek4lc")
+region = Rect2(336, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m2cp4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3m6d5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0autu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mrf5a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v4gl3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8yacs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yeaex")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a3ujb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4obml")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="explosio" type="AnimatedSprite2D"]
+position = Vector2(268, 285)
+sprite_frames = SubResource("SpriteFrames_m2cp4")
+script = ExtResource("2_6hjjn")
+
+[connection signal="animation_finished" from="." to="." method="_on_animation_finished"]

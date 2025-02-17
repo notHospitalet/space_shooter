@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://68t545qbjsch"]
+
+[ext_resource type="Script" path="res://jugador.gd" id="1_kl6a2"]
+[ext_resource type="Texture2D" uid="uid://im3nprytn8ig" path="res://Sprites-2/ship.png" id="2_lsyto"]
+
+[node name="jugador" type="CharacterBody2D"]
+position = Vector2(280, 866)
+script = ExtResource("1_kl6a2")
+metadata/_edit_group_ = true
+
+[node name="Ship" type="Sprite2D" parent="."]
+position = Vector2(0, -6.10352e-05)
+scale = Vector2(1.21875, 1.14062)
+texture = ExtResource("2_lsyto")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, -6.10352e-05)
+scale = Vector2(1.21875, 1.14062)
+polygon = PackedVector2Array(35, -31.3, 33.4, -32, 32, -32, 16.4, -16.4, 3, -29.8, 3, -31.4, 1.5, -32, 0.0999985, -32, -15.5, -15.5, -31.2, -32, -32.5, -32, -34, -31.4, -34, -29.9, -47.9, -15, -48, -1.4, -38, -5.9, -34, -1.3, -34, 0.5, -31.2, 1.3, -25.8, -6.4, -19, -3.7, -19, -0.9, -5.6, -7, -2, -1.6, -2, 0.5, 0.799999, 1.3, 6.2, -6.4, 13, -3.7, 13, -0.9, 26.4, -7, 30, -1.6, 30, 0.5, 32.8, 1.3, 38.1, -6.2, 46.5, -2, 48, -2, 48, -16.8, 35, -29.8)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, -6.10352e-05)
+scale = Vector2(1.21875, 1.14062)
+polygon = PackedVector2Array(3, 0.700001, 0.5, -0.4, -15.5, 15.6, -31.5, -0.4, -34, 0.700001, -34, 2.1, -47.9, 17, -48, 30.6, -37.2, 25.8, -35, 27.1, -35, 30.2, -25.9, 25.6, -19, 28.3, -19, 30.9, -5.2, 25.8, -3, 27.1, -3, 30.2, 6.1, 25.6, 13, 28.3, 13, 29.3, 15.5, 30.4, 17.8, 28, 20, 28, 20, 19.2, 3, 2.2)
+
+[node name="SpawnerLaser" type="Marker2D" parent="."]
+position = Vector2(0, -62)
